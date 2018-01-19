@@ -114,8 +114,9 @@ class ParsePlugins {
                             headersBuilder.set(ParseRESTCommand.HEADER_INSTALLATION_ID, installationId().get());
                         }
                         // client key can be null with self-hosted Parse Server
-                        if (configuration.clientKey != null) {
-                            headersBuilder.set(ParseRESTCommand.HEADER_CLIENT_KEY, configuration.clientKey);
+                        if (configuration.clientKey != null) {                            
+                            //headersBuilder.set(ParseRESTCommand.HEADER_CLIENT_KEY, configuration.clientKey);
+                            headersBuilder.set(ParseRESTCommand.HEADER_MASTER_KEY, configuration.clientKey);
                         }
                         request = request.newBuilder()
                                 .headers(headersBuilder.build())

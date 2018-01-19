@@ -42,8 +42,8 @@ import bolts.Task;
 
   /* package */ static final String HEADER_INSTALLATION_ID = "X-Parse-Installation-Id";
   /* package */ static final String USER_AGENT = "User-Agent";
-  private static final String HEADER_SESSION_TOKEN = "X-Parse-Session-Token";
-  private static final String HEADER_MASTER_KEY = "X-Parse-Master-Key";
+  private static final String HEADER_SESSION_TOKEN = "X-Parse-Session-Token";  
+  /* private */ static final String HEADER_MASTER_KEY = "X-Parse-Master-Key";
   private static final String PARAMETER_METHOD_OVERRIDE = "_method";
 
   // Set via Parse.initialize(Configuration)
@@ -213,7 +213,7 @@ import bolts.Task;
       requestBuilder.addHeader(HEADER_SESSION_TOKEN, sessionToken);
     }
     if (masterKey != null) {
-      requestBuilder.addHeader(HEADER_MASTER_KEY, masterKey);
+      //requestBuilder.addHeader(HEADER_MASTER_KEY, masterKey);
     }
   }
 
